@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .header {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff6f6;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+  }
+  
+  .header p {
+    margin-bottom: 10px;
+    margin-right: 60px;
+  }
+  
+  body {
+    background-image: linear-gradient(to bottom, #303030, #bae4ff);
+    font-family: Arial, sans-serif;
+  }
+  
+  button {
+    padding: 10px 20px;
+    margin: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  .cell {
+    width: 33.3%;
+    height: 33.3%;
+    background-color: #1c1c1c;
+    border: 2px solid #fff7f7;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .blue {
+    background-color: #00f;
+  }
+  
+  .draw-overlay {
+    background-color: green;
+  }
+  
+  .gray-overlay {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .box {
+    width: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 15px solid black;
+    position: relative;
+  }
+  
+  .blue {
+    background-color: blue;
+  }
+  
+  .blue-overlay {
+    background-color: rgba(0, 0, 255);
+  }
+  
+  .overlay {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  
+  .game-overlay {
+    width: 450px;
+    height: 450px;
+    position: absolute;
+    top: 10;
+    left: 10;
+    z-index: 10;
+    display: none;
+  }
+  
+  .player1 {
+    background-color: #00f;
+  }
+  
+  .player2 {
+    background-color: #f00;
+  }
+  
+  .red {
+    background-color: #f00;
+  }
+  
+  .red-overlay {
+    background-color: rgba(255, 0, 0);
+  }
+  
+  #container {
+    width: 40%;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #container.active {
+    width: 90%;
+  }
+  
+  #game {
+    width: 470px;
+    height: 470px;
+    padding: 10px;
+    background-color: #999;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  #options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+  }
+  
+  #winner {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    z-index: 11;
+  }
+  
+  /* Responsive design */
+  
+  @media only screen and (max-width: 768px) {
+    #container {
+      width: 60%;
+    }
+    #game {
+      width: 300px;
+      height: 300px;
+    }
+    .cell {
+      width: 25%;
+      height: 25%;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    #container {
+      width: 80%;
+    }
+    #game {
+      width: 200px;
+      height: 200px;
+    }
+    .cell {
+      width: 20%;
+      height: 20%;
+    }
+  }
